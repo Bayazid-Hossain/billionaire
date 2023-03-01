@@ -5,10 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>billionaire</title>
+    <!-- bootstrap css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>billionaire</h1>
+    
+    <header class="p-2 bg-info">
+        <h1 class="fs-1 fw-bolder text-center">Richest by Industry</h1>
+        <p class="text-center fs-3">(technology)</p>
+    </header>
 
+    <!-- billionaire section -->
+    <section class="container my-4">
+        <div class="text-center mb-4">
+            <button class="btn btn-primary" onclick="allBillionaires()">Show All Billionaires</button>
+            <button class="btn btn-primary" onclick="richestByIndustry()">Richest by Industry</button>
+            <button class="btn btn-primary" onclick="richestByState()">Richest by states</button>
+        </div>
+        <div class="text-center my-5 d-block">
+            <div class="spinner-border d-none" role="status" id="spinner">
+                <span class="visually-hidden text-center">Loading...</span>
+              </div>
+        </div>
+        <div class="">
+            <div class="row row-cols-1  row-cols-md-2 gy-4 gx-2" id="riched-container">
+                <!-- <div class="col  border border-primary p-2 bg-dark text-white rounded">
+                    <h1 class="text-center fs-4">Md. Mohosin</h1>
+                  <div class="h-100 d-flex">
+                    <img style="width: 20px; height: 220px;" src="..." class="img-fluid" alt="...">
+                    <div class="card-body">
+                      <h5>Citizenship : </h5>
+                      <h5>State : </h5>
+                      <h5>City : </h5>
+                      <h5>Total Shares : </h5>
+                      <h5>Share Price : </h5>
+                    </div>
+                </div>
+                </div> -->
+              </div>
+              <div class="text-center my-4 d-none" id="show-all">
+                <button class="btn btn-success" onclick="(showAllRichest())">Show All</button>
+              </div>
+        </div>
+    </section>
+
+    <!-- bootstrap js link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js" integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="billionaire.js"></script>
 </body>
 </html>
